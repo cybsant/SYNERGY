@@ -1,3 +1,4 @@
+
 import random
 
 n = 5
@@ -13,10 +14,10 @@ print("------")
 #############################
 
 ### Bubble sort
-for i in range(n):
-    for j in range(n-1):
-        if arr[j] > arr[j+1]:
-            arr[j], arr[j+1] = arr[j+1], arr[j]
+#for i in range(n):
+#    for j in range(n-1):
+#        if arr[j] > arr[j+1]:
+#            arr[j], arr[j+1] = arr[j+1], arr[j]
 
 ### Shuffle sort
 l_ind = 0

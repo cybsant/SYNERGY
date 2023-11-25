@@ -1,32 +1,25 @@
-import random
+# def decimal_to_binary(n):
+#     if n == 0:
+#         return ""
+#     elif n > 0:
+#         return decimal_to_binary(n // 2) + str(n % 2)
+# n = 43
+# binary = decimal_to_binary(n)
+# print(f"Десятичное число {n} в двоичной системе счисления: {binary}")
 
-n = 5
-arr = list()
-for i in range(n):
-    number = random.randint(1, 100)
-    arr.append(number)
+# fib1 = fib2 = 1
+# print(fib1, fib1, end=' ')
+# n = 13
+# for i in range(2, n):
+#     fib1, fib2 = fib2, fib1 + fib2
+#     print(fib2, end=' ')
 
-print("Notsorted:")
-print(arr)
-print("------")
-
-#############################
-
-arr = [6, 5, 3, 4]
-i = 1
-j = 0
-arr[i] = 5
-arr[j] = 6
-if arr[j] > arr[i]:
-    swap
-
-for i in range(n):
-    val = arr[i]
-    j = i - 1
-    if j < 0:
-        continue
-
-#############################
-
-print("Sorted:")
-print(arr)
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+    
+print(fibonacci(10))
