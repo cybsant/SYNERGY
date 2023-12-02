@@ -1,0 +1,6 @@
+{
+    "codeium.enableSearch": true,
+    "codeium.enableConfig": {
+        "*": true
+    }
+}
