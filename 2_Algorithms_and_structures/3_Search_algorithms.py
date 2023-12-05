@@ -31,26 +31,29 @@ to_search = random.randint(1, 100)
 answer = -1
 
 ### Linear search ---------------
-# for i in range(n):
-#     if arr[i] == to_search:
-#         answer = i
-#         break
+
+for i in range(n):
+    if arr[i] == to_search:
+        answer = i
+        break
 
 ### Binary search ---------------
-# arr.sort()
-# low = 0
-# high = len(arr) - 1
-# while low <= high:
-#     mid = (low + high) // 2
-#     if arr[mid] < to_search:
-#         low = mid + 1
-#     elif arr[mid] > to_search:
-#         high = mid - 1
-#     else:
-#         answer = mid
-#         break
+
+arr.sort()
+low = 0
+high = len(arr) - 1
+while low <= high:
+    mid = (low + high) // 2
+    if arr[mid] < to_search:
+        low = mid + 1
+    elif arr[mid] > to_search:
+        high = mid - 1
+    else:
+        answer = mid
+        break
 
 ### Interpolation search ---------
+
 arr.sort()
 left = 0
 right = len(arr) - 1
@@ -64,7 +67,7 @@ while (left <= right and to_search >= arr[left] and to_search <= arr[right]):
     else:
         right = index - 1
 
-### ------------------------------
+### Results -------------------------
 
 print(arr)
 print(to_search)
