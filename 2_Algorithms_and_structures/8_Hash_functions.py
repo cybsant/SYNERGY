@@ -58,8 +58,11 @@ ht.add(3)
 ht.add(13)
 ht.add(23)
 
-ht._delete(3)
-ht._delete(13)
-ht._delete(23)
+try:
+    ht._delete(3)
+    ht._delete(13)
+    ht._delete(23)
+except ValueError as e:
+    print(str(e))
 
 a = 10
