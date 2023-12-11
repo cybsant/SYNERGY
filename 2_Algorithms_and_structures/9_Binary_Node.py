@@ -1,6 +1,3 @@
-from platform import node
-
-
 class Node:
     def __init__(self):
         self.left = None
@@ -55,8 +52,8 @@ class BinarySearchTree:
             return self.find_node(current.right, value)
 
     def find_min(self):
-        node = self.find_min_node(self.root)
-        return node.value
+        tmp_node = self.find_min_node(self.root)
+        return tmp_node.value
 
     def find_min_node(self, current):
         if current.left is None:
@@ -64,8 +61,8 @@ class BinarySearchTree:
         return self.find_min_node(current.left)
 
     def find_max(self):
-        node = self.find_max_node(self.root)
-        return node.value
+        tmp_node = self.find_max_node(self.root)
+        return tmp_node.value
 
     def find_max_node(self, current):
         if current.right is None:
@@ -104,11 +101,13 @@ print(bst.find(10), bst.find(8), bst.find(20))
 
 print(bst.find_min(), bst.find_max())
 
-#a = 10
+a = 10
 
 bst = BinarySearchTree()
 bst.add(10)
-bst.add(8)
+bst.add(11)
+bst.add(12)
+bst.add(13)
 bst._delete(10)
 
 a = 10
