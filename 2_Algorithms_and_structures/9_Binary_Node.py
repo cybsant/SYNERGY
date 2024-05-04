@@ -45,7 +45,7 @@ class BinarySearchTree:
         if current is None:
             return None
         if current.value == value:
-            return current
+            return True
         if current.value > value:
             return self.find_node(current.left, value)
         else:
@@ -101,6 +101,7 @@ class BinarySearchTree:
                 node.parent.left = node.left
             else:
                 node.parent.right = node.left
+            #! node.left.parent = node.parent
             return
         # One child on right
         if node.left is None and node.right is not None:
@@ -108,6 +109,7 @@ class BinarySearchTree:
                 node.parent.left = node.right
             else:
                 node.parent.right = node.right
+            #! node.right.parent = node.parent
             return
 
         # Two children
@@ -118,42 +120,33 @@ class BinarySearchTree:
             else:
                 node.parent.right = min_node_right
             return
-        raise Exception("Something went wrong with deleting")
+        
 
 
-# bst = BinarySearchTree()
-#
-# print(bst.find(10), bst.find(8), bst.find(20))
-# bst.add(10)
-# print(bst.find(10), bst.find(8), bst.find(20))
-# bst.add(8)
-# print(bst.find(10), bst.find(8), bst.find(20))
-# bst.add(9)
-# print(bst.find(10), bst.find(8), bst.find(20))
-# bst.add(7)
-# print(bst.find(10), bst.find(8), bst.find(20))
-# bst.add(20)
-# print(bst.find(10), bst.find(8), bst.find(20))
-#
-# print(bst.find_min(), bst.find_max())
-#
-# a = 10
+
 
 bst = BinarySearchTree()
-
-bst.add(5)
-bst.add(3)
-bst.add(1)
-bst.add(2)
+print(bst.find(10), bst.find(8), bst.find(20))
+bst.add(10)
+print(bst.find(10), bst.find(8), bst.find(20))
 bst.add(8)
+print(bst.find(10), bst.find(8), bst.find(20))
+bst.add(9)
+print(bst.find(10), bst.find(8), bst.find(20))
 bst.add(7)
-bst.add(6)
-bst.add(19)
-bst.add(15)
-bst.add(22)
+print(bst.find(10), bst.find(8), bst.find(20))
+bst.add(20)
+print(bst.find(10), bst.find(8), bst.find(20))
 
-bst._delete(2)
-bst._delete(15)
-bst._delete(22)
+print(bst.find_min(), bst.find_max())
+
+a = 10
+
+bst = BinarySearchTree()
+bst.add(10)
+bst.add(11)
+bst.add(12)
+bst.add(13)
+bst._delete(10)
 
 a = 10
